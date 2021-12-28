@@ -30,7 +30,12 @@ export PATH=$SPARK_HOME/bin:$PATH
 export SPARK_LOCAL_IP='127.0.0.1'
 
 # Pyspark
-export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON=jupyter # How to rollback: $unset PYSPARK_DRIVER_PYTHON
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 export PYSPARK_PYTHON=python3
+```
+
+
+```
+spark-submit --master local ./spark-3.1.2-bin-hadoop3.2/examples/src/main/python/pi.py 10
 ```
